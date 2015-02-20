@@ -18,7 +18,9 @@ RUN wget http://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/ap
 # Verify Maven installation with: mvn -version
 
 # Installing Avocado
-RUN wget https://github.com/bigdatagenomics/avocado/archive/master.tar.gz && \
+# FIXME: should pull from official source once the bug is fixed
+#RUN wget https://github.com/bigdatagenomics/avocado/archive/master.tar.gz && \
+RUN wget https://github.com/GELOG/avocado/archive/master.tar.gz && \
     tar -xzf /master.tar.gz -C /usr/local/ && \
     rm /master.tar.gz && \
     ln -s /usr/local/avocado-master $AVOCADO_HOME && \
