@@ -11,20 +11,23 @@ Docker is an open platform for developers and sysadmins to build, ship, and run 
 https://www.docker.com/whatisdocker/
 
 ## What is a Docker Image?
-In Docker terminology, a read-only Layer is called an image. An image never changes.
+Docker images are the basis of containers. Images are read-only, while containers are writeable. Only the containers can be executed by the operating system.
 
 https://docs.docker.com/terms/image/
 
-## what is a Docker Layer?
-When Docker mounts the rootfs, it starts read-only, as in a traditional Linux boot, but then, instead of changing the file system to read-write mode, it takes advantage of a union mount to add a read-write file system over the read-only file system. In fact there may be multiple read-only file systems stacked on top of each other. We think of each one of these file systems as a layer.
-
-https://docs.docker.com/terms/layer/
-
 # Dependencies
-* [Docker](https://docs.docker.com/installation/)
-* Docker image of [gelog/spark:1.1.0-bin-hadoop2.3](https://registry.hub.docker.com/u/gelog/spark/)
+* [Install Docker](https://docs.docker.com/installation/)
+
+# Base Docker image
+* [gelog/spark:1.1.0-bin-hadoop2.3](https://registry.hub.docker.com/u/gelog/spark/)
 
 # How to use this image?
+### 1) Get the adam file of a genome (or chromosome) 
+#### 1.1) Get it from [Adam](https://github.com/GELOG/docker-ubuntu-adam)
+
+### 2) Find the variation of the genome (or chromosome) with Avocado
+#### 2.1) From [Adam](https://github.com/GELOG/docker-ubuntu-adam)
+```
+##docker run --rm=true -ti -v /docker-volume/:/docker-volume gelog/adam adam-submit transform /docker-volume/SRR062634.sam /docker-volume/SRR062634.adam
 ```
 
-```
