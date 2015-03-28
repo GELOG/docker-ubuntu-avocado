@@ -33,5 +33,5 @@ Docker images are the basis of containers. Images are read-only, while container
     wget -O /data/chr1.fa.gz http://hgdownload.cse.ucsc.edu/goldenPath/hg19/chromosomes/chr1.fa.gz
     gzip -d /data/chr1.fa.gz
 ### 3) Find the variation of the genome (or chromosome) with Avocado
-    docker run -ti --rm --name client-genomics -v /data:/data avo /bin/bash
+    docker run -ti --rm --name client-genomics -v /data:/data gelog/avocado /bin/bash
     avocado-submit /data/SRR062634.adam /data/chr1.fa /data/SRR062634.avr /usr/local/avocado/avocado-sample-configs/basic.properties
