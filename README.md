@@ -1,5 +1,6 @@
 # Supported tags and respective `Dockerfile` links
-- [`0.0.0-master-branch`/Dockerfile](https://github.com/GELOG/docker-ubuntu-avocado/blob/0.0.0-master-branch/Dockerfile)
+- [`0.0.0-master-branch-s1.2-h2.3`/Dockerfile](https://github.com/GELOG/docker-ubuntu-avocado/blob/master/0.0.0-master-branch-s1.2-h2.3/Dockerfile)
+- [`0.0.0-master-branch-s1.1-h2.3`/Dockerfile](https://github.com/GELOG/docker-ubuntu-avocado/blob/master/0.0.0-master-branch-s1.1-h2.3/Dockerfile)
 
 # What is Avocado ?
 avocado is a distributed pipeline for calling variants, and is built on top of [Apache Spark](http://spark.apache.org/) and the [ADAM API](http://bdgenomics.org/projects/adam/). avocado provides a highly configurable pipeline that can be used for the alignment, processing, and variant calling of genomes/exomes/targets. We are currently in the process of hardening avocado for clincial use, and expanding the avocado pipeline so that it can triage processing steps based on genomic complexity.
